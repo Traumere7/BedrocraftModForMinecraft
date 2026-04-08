@@ -1,5 +1,6 @@
 package com.traumere.bedrocraft;
 
+import com.traumere.bedrocraft.block.ModBlocks;
 import com.traumere.bedrocraft.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -20,7 +21,8 @@ public class Bedrocraft implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-        ModItems.registerItems();
+        ModItems.registerModItems();
+        ModBlocks.registerModBlocks();
 		LOGGER.info("Hello Fabric world!");
 	}
 }

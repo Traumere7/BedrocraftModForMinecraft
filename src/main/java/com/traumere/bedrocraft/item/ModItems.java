@@ -1,6 +1,7 @@
 package com.traumere.bedrocraft.item;
 
 import com.traumere.bedrocraft.Bedrocraft;
+import com.traumere.bedrocraft.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.BlockItem;
@@ -40,13 +41,18 @@ public class ModItems {
     }
 
     // 将物品加入创造模式物品栏
-    public static void addItemToItemGroup(FabricItemGroupEntries entries) {
+    public static void addItemToItemGroupIngredients(FabricItemGroupEntries entries) {
         entries.add(CORE_OF_NATURE);
         entries.add(CORE_OF_METAL);
     }
 
+    public static void addItemToItemGroupNatural(FabricItemGroupEntries entries) {
+        entries.add(ModBlocks.GLOWING_BEDROCK);
+    }
+
     // 辅助注册方法，用于在主程序中初始化
-    public static void registerItems() {
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemToItemGroup);
+    public static void registerModItems() {
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemToItemGroupIngredients);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(ModItems::addItemToItemGroupNatural);
     }
 }
