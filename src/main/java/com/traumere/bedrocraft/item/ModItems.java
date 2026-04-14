@@ -48,6 +48,7 @@ public class ModItems {
 
     public static void addItemToItemGroupNatural(FabricItemGroupEntries entries) {
         entries.add(ModBlocks.GLOWING_BEDROCK);
+        entries.add(ModBlocks.CORE_OF_METAL_ORE);
     }
 
     // 辅助注册方法，用于在主程序中初始化
