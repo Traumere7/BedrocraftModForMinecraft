@@ -12,7 +12,7 @@ public enum ModToolMaterials implements ToolMaterial {
     用于制作工具的材料
      */
 
-    BEDROCK(4, 2031, 12.0F, 4.0F, 50,
+    BEDROCK(4, 2031, 20.0F, 4.0F, 50,
             () -> Ingredient.ofItems(Items.BEDROCK));
 
 

@@ -3,7 +3,8 @@
 	"package": "com.traumere.bedrocraft.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+        "AbstractBlockStateMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
