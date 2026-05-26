@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.PickaxeItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -17,8 +18,10 @@ public class ModItems {
     用于注册物品类
      */
 
-    public static final Item CORE_OF_NATURE = registerItems("material/core_of_nature", new Item(new Item.Settings()));
-    public static final Item CORE_OF_METAL = registerItems("material/core_of_metal", new Item(new Item.Settings()));
+    public static final Item CORE_OF_NATURE = registerItems("materials/core_of_nature", new Item(new Item.Settings()));
+    public static final Item CORE_OF_METAL = registerItems("materials/core_of_metal", new Item(new Item.Settings()));
+    public static final Item BEDROCK_PICKAXE = registerItems("tools/bedrock_pickaxe", new PickaxeItem(ModToolMaterials.BEDROCK,
+            2, -2.8F, new Item.Settings()));
 
     public static Item registerItems(String id, Item item) {
         return Registry.register(Registries.ITEM, RegistryKey.of(Registries.ITEM.getKey(), new Identifier(Bedrocraft.MOD_ID, id)), item);
@@ -51,9 +54,15 @@ public class ModItems {
         entries.add(ModBlocks.CORE_OF_METAL_ORE);
     }
 
+    private static void addItemToItemGroupTools(FabricItemGroupEntries entries) {
+        entries.add(BEDROCK_PICKAXE);
+    }
+
     // 辅助注册方法，用于在主程序中初始化
     public static void registerModItems() {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemToItemGroupIngredients);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(ModItems::addItemToItemGroupNatural);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(ModItems::addItemToItemGroupTools);
     }
+
 }

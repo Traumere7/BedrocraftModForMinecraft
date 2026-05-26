@@ -18,5 +18,7 @@ public class ModZhCnLangProvider extends FabricLanguageProvider {
 
         translationBuilder.add(ModBlocks.GLOWING_BEDROCK, "发光基岩");
         translationBuilder.add(ModBlocks.CORE_OF_METAL_ORE, "金属核心矿石");
+
+        translationBuilder.add(ModItems.BEDROCK_PICKAXE, "基岩镐");
     }
 }

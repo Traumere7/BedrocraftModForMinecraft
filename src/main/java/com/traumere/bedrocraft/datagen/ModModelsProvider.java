@@ -24,5 +24,7 @@ public class ModModelsProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.CORE_OF_NATURE, Models.GENERATED);
         itemModelGenerator.register(ModItems.CORE_OF_METAL, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.BEDROCK_PICKAXE, Models.HANDHELD);
     }
 }

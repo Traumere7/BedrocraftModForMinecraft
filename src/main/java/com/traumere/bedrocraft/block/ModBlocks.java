@@ -20,7 +20,6 @@ public class ModBlocks {
                     .mapColor(MapColor.DARK_RED)
                     .instrument(Instrument.BASEDRUM)
                     .strength(-1.0F, 3600000.0F)
-                    .dropsNothing()
                     .allowsSpawning(Blocks::never)
                     .luminance(state -> 8)
         )
