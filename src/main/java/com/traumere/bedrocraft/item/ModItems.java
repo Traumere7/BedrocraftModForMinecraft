@@ -60,6 +60,7 @@ public class ModItems {
     public static void addItemToItemGroupNatural(FabricItemGroupEntries entries) {
         entries.add(ModBlocks.GLOWING_BEDROCK);
         entries.add(ModBlocks.CORE_OF_METAL_ORE);
+        entries.add(ModBlocks.DEEPSLATE_CORE_OF_METAL_ORE);
     }
 
     private static void addItemToItemGroupTools(FabricItemGroupEntries entries) {

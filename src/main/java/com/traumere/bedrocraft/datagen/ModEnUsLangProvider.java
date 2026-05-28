@@ -18,6 +18,7 @@ public class ModEnUsLangProvider extends FabricLanguageProvider {
 
         translationBuilder.add(ModBlocks.GLOWING_BEDROCK, "Glowing Bedrock");
         translationBuilder.add(ModBlocks.CORE_OF_METAL_ORE, "Core of Metal Ore");
+        translationBuilder.add(ModBlocks.DEEPSLATE_CORE_OF_METAL_ORE, "Deepslate Core of Metal Ore");
 
         translationBuilder.add(ModItems.BEDROCK_PICKAXE, "Bedrock Pickaxe");
     }

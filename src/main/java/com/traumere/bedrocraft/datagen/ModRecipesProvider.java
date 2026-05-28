@@ -18,7 +18,7 @@ public class ModRecipesProvider extends FabricRecipeProvider {
         super(output);
     }
 
-    public static final List<ItemConvertible> CORE_OF_METAL = List.of(ModBlocks.CORE_OF_METAL_ORE);
+    public static final List<ItemConvertible> CORE_OF_METAL = List.of(ModBlocks.CORE_OF_METAL_ORE, ModBlocks.DEEPSLATE_CORE_OF_METAL_ORE);
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
         offerSmelting(exporter, CORE_OF_METAL, RecipeCategory.MISC, ModItems.CORE_OF_METAL, 0.7f, 200, "core_of_metal");

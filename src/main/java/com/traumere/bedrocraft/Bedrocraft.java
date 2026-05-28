@@ -2,6 +2,7 @@ package com.traumere.bedrocraft;
 
 import com.traumere.bedrocraft.block.ModBlocks;
 import com.traumere.bedrocraft.item.ModItems;
+import com.traumere.bedrocraft.world.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
@@ -28,12 +29,12 @@ public class Bedrocraft implements ModInitializer {
 
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
+        ModWorldGeneration.register();
+
 		LOGGER.info("Hello Fabric world!");
 
         PlayerBlockBreakEvents.AFTER.register((world, player, pos, state, blockEntity) -> {
-            // 1. 确保在服务端运行
-            // 2. 确认被破坏的方块是原版基岩
-            // 3. 确认玩家主武器是你的特制镐子，防止其他模组的破坏方式导致掉落
+            // 确保在服务端运行
             if (!world.isClient() && state.isOf(Blocks.BEDROCK)) {
                 if (player.getMainHandStack().isOf(ModItems.BEDROCK_PICKAXE)) {
                     // 在被破坏的坐标处生成一个基岩物品实体

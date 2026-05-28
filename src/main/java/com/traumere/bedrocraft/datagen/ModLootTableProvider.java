@@ -25,6 +25,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     public void generate() {
         addDrop(ModBlocks.GLOWING_BEDROCK, oreDrops(ModBlocks.GLOWING_BEDROCK, Items.BEDROCK));
         addDrop(ModBlocks.CORE_OF_METAL_ORE, likeCopperOreDrops(ModBlocks.CORE_OF_METAL_ORE, ModItems.CORE_OF_METAL,2.0f, 5.0f));
+        addDrop(ModBlocks.DEEPSLATE_CORE_OF_METAL_ORE, likeCopperOreDrops(ModBlocks.DEEPSLATE_CORE_OF_METAL_ORE, ModItems.CORE_OF_METAL,2.0f, 5.0f));
     }
     public LootTable.Builder likeCopperOreDrops(Block drop, Item item, float min,  float max) {
         return dropsWithSilkTouch(

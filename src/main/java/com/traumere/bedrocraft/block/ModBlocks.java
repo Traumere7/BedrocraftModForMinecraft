@@ -9,6 +9,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
+import static net.minecraft.block.Blocks.DEEPSLATE_IRON_ORE;
 import static net.minecraft.block.Blocks.IRON_ORE;
 
 public class ModBlocks {
@@ -26,6 +27,7 @@ public class ModBlocks {
     );
 
     public static final Block CORE_OF_METAL_ORE = register("core_of_metal_ore", new ExperienceDroppingBlock(AbstractBlock.Settings.copy(IRON_ORE)));
+    public static final Block DEEPSLATE_CORE_OF_METAL_ORE = register("deepslate_core_of_metal_ore", new ExperienceDroppingBlock(AbstractBlock.Settings.copy(DEEPSLATE_IRON_ORE)));
 
     public static Block register(String id, Block block) {
         registerBlockItems(id, block);

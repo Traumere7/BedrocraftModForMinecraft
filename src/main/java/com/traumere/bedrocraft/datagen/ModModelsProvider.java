@@ -18,6 +18,7 @@ public class ModModelsProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GLOWING_BEDROCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CORE_OF_METAL_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSLATE_CORE_OF_METAL_ORE);
     }
 
     @Override
