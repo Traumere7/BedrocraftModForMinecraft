@@ -21,5 +21,7 @@ public class ModEnUsLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.DEEPSLATE_CORE_OF_METAL_ORE, "Deepslate Core of Metal Ore");
 
         translationBuilder.add(ModItems.BEDROCK_PICKAXE, "Bedrock Pickaxe");
+
+        translationBuilder.add(ModBlocks.COMPRESSOR, "Compressor");
     }
 }

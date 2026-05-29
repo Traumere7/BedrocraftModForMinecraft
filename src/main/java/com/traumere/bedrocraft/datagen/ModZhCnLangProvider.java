@@ -21,5 +21,7 @@ public class ModZhCnLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.DEEPSLATE_CORE_OF_METAL_ORE, "深层金属核心矿石");
 
         translationBuilder.add(ModItems.BEDROCK_PICKAXE, "基岩镐");
+
+        translationBuilder.add(ModBlocks.COMPRESSOR, "压缩机");
     }
 }

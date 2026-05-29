@@ -67,11 +67,16 @@ public class ModItems {
         entries.add(BEDROCK_PICKAXE);
     }
 
+    private static void addItemToItemGroupFunctional(FabricItemGroupEntries entries) {
+        entries.add(ModBlocks.COMPRESSOR);
+    }
+
     // 辅助注册方法，用于在主程序中初始化
     public static void registerModItems() {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemToItemGroupIngredients);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(ModItems::addItemToItemGroupNatural);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(ModItems::addItemToItemGroupTools);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(ModItems::addItemToItemGroupFunctional);
     }
 
 }

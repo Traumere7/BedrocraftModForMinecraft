@@ -1,6 +1,7 @@
 package com.traumere.bedrocraft;
 
 import com.traumere.bedrocraft.block.ModBlocks;
+import com.traumere.bedrocraft.block.entity.ModBlockEntities;
 import com.traumere.bedrocraft.item.ModItems;
 import com.traumere.bedrocraft.world.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
@@ -30,6 +31,7 @@ public class Bedrocraft implements ModInitializer {
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
         ModWorldGeneration.register();
+        ModBlockEntities.registerBlockEntities();
 
 		LOGGER.info("Hello Fabric world!");
 

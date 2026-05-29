@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "bedrocraft:block/compressor" },
+    "facing=south": { "model": "bedrocraft:block/compressor", "y": 180 },
+    "facing=west":  { "model": "bedrocraft:block/compressor", "y": 270 },
+    "facing=east":  { "model": "bedrocraft:block/compressor", "y": 90 }
+  }
+}

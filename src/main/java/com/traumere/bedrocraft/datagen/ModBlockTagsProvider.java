@@ -18,6 +18,7 @@ public class ModBlockTagsProvider extends FabricTagProvider.BlockTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.CORE_OF_METAL_ORE)
-                .add(ModBlocks.DEEPSLATE_CORE_OF_METAL_ORE);
+                .add(ModBlocks.DEEPSLATE_CORE_OF_METAL_ORE)
+                .add(ModBlocks.COMPRESSOR);
     }
 }

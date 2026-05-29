@@ -29,6 +29,15 @@ public class ModBlocks {
     public static final Block CORE_OF_METAL_ORE = register("core_of_metal_ore", new ExperienceDroppingBlock(AbstractBlock.Settings.copy(IRON_ORE)));
     public static final Block DEEPSLATE_CORE_OF_METAL_ORE = register("deepslate_core_of_metal_ore", new ExperienceDroppingBlock(AbstractBlock.Settings.copy(DEEPSLATE_IRON_ORE)));
 
+    public static  final Block COMPRESSOR =  register("compressor", new CompressorBlock(
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DEEPSLATE_GRAY)
+                    .instrument(Instrument.BASEDRUM)
+                    .requiresTool()
+                    .strength(5.0F, 1200.0F)
+        )
+    );
+
     public static Block register(String id, Block block) {
         registerBlockItems(id, block);
         return Registry.register(Registries.BLOCK, new Identifier(Bedrocraft.MOD_ID, id), block);
